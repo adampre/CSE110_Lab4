@@ -5,10 +5,24 @@ public class Expense {
     private Category category;
     private double amount;
 
+    private int id; 
+
+    public Expense(int id, String name, Category category, double amount) {
+        this.name = name;
+        this.category = category;
+        this.amount = amount;
+        this.id = id;
+    }
+
     public Expense(String name, Category category, double amount) {
         this.name = name;
         this.category = category;
         this.amount = amount;
+        this.id = -1;
+    }
+
+    public int getID() {
+        return id;
     }
 
     public String getName() {
